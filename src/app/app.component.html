@@ -11,11 +11,13 @@
       <h2>Mes appareils :</h2>
       <p>Mis à jour : {{ lastUpdate | async | date:'fullDate' | lowercase }}</p>
       <ul class="list-group">
-        <app-appareils *ngFor="let appareil of appareils" [appareilName]="appareil.name"
+        <app-appareils *ngFor="let appareil of appareils; let i = index"
+          [indexOfAppareil]="i"
+          [appareilName]="appareil.name"
           [appareilStatus]="appareil.status"></app-appareils>
       </ul>
-      <br>
-      <button class="btn btn-success" [disabled]="!isAuth" (click)="onAllumer()">Tout allumer</button>
+      <button class="btn btn-success mt-3" [disabled]="!isAuth" (click)="onAllumer()" >Tout allumer</button>
+      <button class="btn btn-danger mt-3 ml-3" (click)="onEteindre()">Tout éteindre</button>
     </div>
   </div>
 </div>

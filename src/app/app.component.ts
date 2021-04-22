@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppareilService } from './services/appareil.service';
 
 @Component({
   selector: 'app-root',
@@ -23,22 +24,9 @@ export class AppComponent implements OnInit {
     }
   );
 
-  appareils = [
-    {
-      name: 'Guitar Amp',
-      status: 'éteint',
-    },
-    {
-      name: 'Alim Console',
-      status: 'éteint',
-    },
-    {
-      name: 'Bar Light',
-      status: 'allumé',
-    },
-  ];
+  appareils: any[];
 
-  constructor() {
+  constructor(private appareilService: AppareilService) {
     setTimeout(
       () => {
         this.isAuth = true;
@@ -46,10 +34,15 @@ export class AppComponent implements OnInit {
     );
   }
 
-  onAllumer(): void {
-    console.log('On allume tout !');
+  ngOnInit(): void {
+    this.appareils = this.appareilService.appareils;
   }
 
-  ngOnInit(): void {
+  onAllumer(): void {
+    this.appareilService.switchOnAll();
+  }
+
+  onEteindre(): void {
+    this.appareilService.switchOffAll();
   }
 }
