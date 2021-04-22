@@ -1,24 +1,13 @@
 <!-- Toolbar -->
-<div class="text-center">
-  <h1>Welcome to {{ title }} </h1>
-  <img width="133" alt="Angular Logo"
+<div class="d-flex justify-content-center my-4">
+  <img width="50" alt="Angular Logo"
     src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==" />
+    <h1 class="ml-3 mt-2">Welcome to {{ title }} </h1>
 </div>
 
-<div class="container text-center col-md-8 mx-auto">
-  <div class="row mx-auto">
-    <div class="col-xs-12 mx-auto">
-      <h2>Mes appareils :</h2>
-      <p>Mis à jour : {{ lastUpdate | async | date:'fullDate' | lowercase }}</p>
-      <ul class="list-group">
-        <app-appareils *ngFor="let appareil of appareils; let i = index"
-          [indexOfAppareil]="i"
-          [appareilName]="appareil.name"
-          [appareilStatus]="appareil.status"></app-appareils>
-      </ul>
-      <button class="btn btn-success mt-3" [disabled]="!isAuth" (click)="onAllumer()" >Tout allumer</button>
-      <button class="btn btn-danger mt-3 ml-3" (click)="onEteindre()">Tout éteindre</button>
-    </div>
+<div class="container d-flex justify-content-center my-4">
+  <div class="row text-center d-flex justify-content-center">
+    <app-appareil-view></app-appareil-view>
   </div>
 </div>
 
