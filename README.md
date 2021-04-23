@@ -2,7 +2,7 @@
 
 > just a Web Dev student exercice
 
-### 🏠 [Homepage Live](https://ipopop.github.io/OC-Angular-App/)
+### 🏠 [Homepage Live](https://ipopop.github.io/OC-Angular-App/appareils)
 
 ![MyAngularProject](docs/assets/img/my-angular-project.jpg)
 
