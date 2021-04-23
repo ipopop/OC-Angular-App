@@ -1,5 +1,10 @@
 # MyAngularProject
 
+> just a Web Dev student exercice
+
+### 🏠 [Homepage Live](https://ipopop.github.io/BaroniEmmanuel_4_03122020/index.html)
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.6.
 
 ## Development server

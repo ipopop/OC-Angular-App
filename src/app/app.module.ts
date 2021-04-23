@@ -12,7 +12,7 @@ import { AuthComponent } from './auth/auth.component';
 import { AppareilViewComponent } from './appareil-view/appareil-view.component';
 
 import { RouterModule, Routes } from '@angular/router';
-
+import { AuthService } from './services/auth.service';
 
 const appRoutes: Routes = [
   { path: 'appareils', component: AppareilViewComponent },
@@ -35,6 +35,7 @@ const appRoutes: Routes = [
   ],
   providers: [
     AppareilService,
+    AuthService
   ],
   bootstrap: [AppComponent]
 })
