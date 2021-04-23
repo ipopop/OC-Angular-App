@@ -4,6 +4,7 @@
 
 ### 🏠 [Homepage Live](https://ipopop.github.io/BaroniEmmanuel_4_03122020/index.html)
 
+![Angular10en90min](https://raw.githubusercontent.com/ipopop/OC-Angular-App/main/src/assets/img/my-angular-project.jpg)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.6.
 

@@ -1,18 +1,30 @@
 export class AppareilService {
     appareils = [
         {
+            id: 1,
             name: 'Guitar Amp',
             status: 'éteint',
         },
         {
-            name: 'Alim Console',
+            id: 2,
+            name: 'Solar Power',
             status: 'éteint',
         },
         {
-            name: 'Bar Light',
+            id: 3,
+            name: 'Wind Power',
             status: 'allumé',
         },
     ];
+
+    getAppareilById(id: number) {
+        const appareil = this.appareils.find(
+            (appareilObject) => {
+                return appareilObject.id === id;
+            }
+        );
+        return appareil;
+    }
 
     switchOnAll() {
         for (let appareil of this.appareils) {
