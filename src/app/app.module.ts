@@ -15,12 +15,15 @@ import { RouterModule, Routes } from '@angular/router';
 import { AuthService } from './services/auth.service';
 import { AuthGuard } from './services/auth-guard.service';
 import { SingleAppareilComponent } from './single-appareil/single-appareil.component';
+import { FourOFourComponent } from './four-o-four/four-o-four.component';
 
 const appRoutes: Routes = [
   { path: 'appareils', canActivate: [AuthGuard], component: AppareilViewComponent },
   { path: 'appareils/:id', canActivate: [AuthGuard], component: SingleAppareilComponent },
   { path: 'auth', component: AuthComponent },
-  { path: '', component: AppareilViewComponent }
+  { path: '', component: AppareilViewComponent },
+  { path: 'not-found', component: FourOFourComponent },
+  { path: '**', redirectTo: '/not-found' }
 ];
 @NgModule({
   declarations: [
@@ -28,7 +31,8 @@ const appRoutes: Routes = [
     AppareilComponent,
     AuthComponent,
     AppareilViewComponent,
-    SingleAppareilComponent
+    SingleAppareilComponent,
+    FourOFourComponent
   ],
   imports: [
     BrowserModule,
