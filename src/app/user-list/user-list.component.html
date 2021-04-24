@@ -1,0 +1,10 @@
+<a class="btn btn-secondary btn-sm mb-3" routerLink="/new-users">Nouvel utilisateur</a>
+<ul class="list-group">
+    <li class="list-group-item border m-1" *ngFor="let user of users">
+        <h5>{{ user.firstName }} {{ user.lastName }}</h5>
+        <p>{{ user.email }}</p>
+        <p>{{ user.phone }}</p>
+        <p *ngIf="user.hobbies && user.hobbies.length > 0">Activités :
+            <span *ngFor="let hobby of user.hobbies"><em> {{ hobby }} /</em></span></p>
+    </li>
+</ul>
