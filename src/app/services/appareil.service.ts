@@ -63,7 +63,7 @@ export class AppareilService {
 
     saveAppareilsToServer() {
         this.httpClient
-          .put('https://http-client-demo-e6ed7-default-rtdb.europe-west1.firebasedatabase.app/appareils.json', this.appareils)
+          .put('http://http-client-demo-e6ed7-default-rtdb.europe-west1.firebasedatabase.app/appareils.json', this.appareils)
           .subscribe(
             () => {
               console.log('Enregistrement terminé !');
@@ -76,7 +76,7 @@ export class AppareilService {
 
     getAppareilsFromServer() {
         this.httpClient
-            .get<any[]>('https://http-client-demo-e6ed7-default-rtdb.europe-west1.firebasedatabase.app/appareils.json')
+            .get<any[]>('http://http-client-demo-e6ed7-default-rtdb.europe-west1.firebasedatabase.app/appareils.json')
             .subscribe(
                 (response) => {
                     this.appareils = response;
