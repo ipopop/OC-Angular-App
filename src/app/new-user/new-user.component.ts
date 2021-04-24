@@ -24,7 +24,7 @@ export class NewUserComponent implements OnInit {
   initForm() {
     this.userForm = this.formBuilder.group({
       firstName: ['', Validators.required],
-      lastname: ['', Validators.required],
+      lastName: ['', Validators.required],
       email: ['', Validators.required],
       phone: ['', Validators.required, Validators.email],
       hobbies: this.formBuilder.array([]),
