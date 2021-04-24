@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AppareilService } from '../services/appareil.service';
-import { Subscription } from 'rxjs';
+import { Subscription } from 'rxjs-compat';
 
 @Component({
   selector: 'app-appareil-view',
@@ -51,4 +51,11 @@ export class AppareilViewComponent implements OnInit {
     this.appareilService.switchOffAll();
   }
 
+  onSave(): void {
+    this.appareilService.saveAppareilsToServer();
+  }
+
+  onFetch() {
+    this.appareilService.getAppareilsFromServer();
+  }
 }

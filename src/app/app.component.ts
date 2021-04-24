@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Observable, Subscription } from 'rxjs';
-import 'rxjs/add/observable/interval';
+import { Observable, Subscription } from 'rxjs-compat';
+import 'rxjs-compat/add/observable/interval';
 
 @Component({
   selector: 'app-root',

@@ -1,5 +1,5 @@
 import { User } from "../models/User.model";
-import { Subject } from "rxjs/internal/Subject";
+import { Subject } from "rxjs-compat/Subject";
 
 export class UserService {
 
